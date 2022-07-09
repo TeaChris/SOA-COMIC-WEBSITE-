@@ -1,0 +1,275 @@
+.container{
+    max-width: 1200px;
+}
+
+.heading1{
+    font-size: 40px;
+    text-transform: uppercase;
+    padding-left: 0.7rem;
+}
+
+.heading2{
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.heading3{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.sub-heading{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-warning);
+    padding-bottom: 10px;
+}
+
+.sub-heading p{
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-right: 10px;
+    padding-left: 0.7rem;
+}
+
+.sub-heading span{
+    color: var(--color-text);
+    font-weight: 300;
+    border-right: 1px solid var(--color-warning);
+    padding-right: 10px;
+}
+
+.sub-heading .important{
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+
+/* ==============HOME================ */
+
+.home{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 6rem;
+}
+
+.left img{
+    padding-left: 0.7rem;
+}
+
+.left h2{
+    padding-left: 0.7rem;
+    font-size: 1.5rem;
+}
+
+.home-img{
+    width: 100%;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.list img{
+    width: 100%;
+    height: 80px;
+}
+
+
+/* =============ARTICLE================ */
+/* article > p{
+    font-size: 20px;
+    padding-left: 0.7rem;
+    margin-bottom: 20px;
+
+    columns: 3 25ch;
+    column-gap: 40px;
+    hyphens: auto;
+}
+
+article p:first-child::first-line{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+/* ================BLACKQUOTE================ */
+/* blockquote{
+    font-size: 20px;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+blockquote::before{
+    content: open-quote;
+    position: absolute;
+    top: -48px;
+    left: -4px;
+    opacity: .3;
+    font-size: 150px;
+}
+
+.cards{
+    columns: 25ch 3;
+    gap: 40px;
+} */
+
+
+/* =============== SELECT ==================== */
+select{
+    --webkit-appearance: none;
+    -moz-appearance: none;
+    -mz-appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: 0!important;
+    background: var(--color-text); 
+    background-image: none;
+    font-size: 1.5em;
+}
+
+select::-ms-expand{
+    display: none;
+}
+
+.select{
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: var(--color-text);
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+select{
+    flex: 1;
+    padding: 0.4rem;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+.select::after{
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: var(--color-warning);
+    color: var(--color-black);
+    cursor: pointer;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.select:hover::after{
+    color: var(--color-white);
+}
+
+
+
+/* =============== COMICS GALLERY ================ */
+.containa{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center; 
+   margin: 4rem 2rem 0 2rem;
+}
+
+.containa .headin{
+    width: 50%;
+    padding-bottom: 4rem;
+}
+
+.containa .headin h3{
+    font-size: 2rem;
+    font-weight: bolder;
+    border-bottom: 3px solid var(--color-warning);
+    padding-bottom: 0.5rem;
+}
+
+.containa .headin h3 span{
+    font-weight: 100;
+}
+
+/* ===== IMAGES COLUMNS ===== */
+
+.containa .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containa .box .col{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.containa .box .col img{
+    width: 100%;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.containa .btn{
+    margin: 4rem 0 9rem 0;
+}
+
+.containa .btn a{
+    color: var(--color-black);
+}
+
+
+
+
+
+/* ===================MEDIA QUERY=========================== */
+@media screen and (max-width: 950px) {
+    .home{
+        grid-template-columns: 1fr;
+    }
+
+    .lists{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .list{
+        grid-template-columns: 1fr 5fr;
+    }
+}
+
+/* ============= COMIC GALLERY MEDIA QUERY ============== */
+@media only screen and (max-width: 769px) {
+    .containa .box{
+        flex-direction: column;
+    }
+
+    .containa .box .col{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 643px) {
+    .containa .headin{
+        width: 100%;
+    }
+
+    .containa .headin h3{
+        font-size: 1em;
+    }
+}
